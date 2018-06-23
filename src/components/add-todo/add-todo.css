@@ -1,5 +1,4 @@
 .addTodo-container {
-  font-family: 'Rubik', sans-serif;
   margin-top: 2vh;
   color: #616291;
   width: 35vw;
@@ -24,6 +23,9 @@
   padding: .5rem;
   margin: .5rem;
 }
+.addTodo-input:focus {
+  outline-color: #bc6c83;
+}
 .addTodo-input__error {
   align-self: center;
   resize: none;
@@ -35,15 +37,15 @@
   padding: .5rem;
   margin: .5rem;
 }
-
-.addTodo-input::placeholder {
-  color: #616291;
+.addTodo-input__error:focus {
+  outline-color: #bc6c83;
 }
 
 .addTodo-button {
   background-color: #616291;
   color: white;
   padding: .3rem;
+  margin-top: 1vh;
   border: none;
   font-size: 1.3rem;
   width: 30%;

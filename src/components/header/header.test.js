@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from './header';
@@ -15,5 +14,5 @@ it('renders an h1 with the title of the app', () => {
 });
 
 it('renders two icons', () => {
-  expect(wrapper.find(FontAwesomeIcon).length).toEqual(2);
+  expect(wrapper.find(FontAwesomeIcon)).toHaveLength(2);
 });

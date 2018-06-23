@@ -15,14 +15,15 @@ class AddTodo extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    if (!this.state.name) this.setState({nameError: true});
-    if (!this.state.description) {this.setState({descriptionError: true});}
+    if (!this.state.name || !this.state.description) {
+      if (!this.state.name && !this.state.nameError) this.setState({nameError: true});
+      else this.setState({descriptionError: true});
+    }
     else {
       this.setState({name: '', description: '', nameError: false, descriptionError: false});
     }
   }
   render() {
-    console.log(this.state);
     const {name, description, nameError, descriptionError} = this.state;
     return (
     <div className="addTodo-container">
