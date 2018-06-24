@@ -7,8 +7,64 @@
   background-color: #ffffff;
   padding: .5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   border-radius: 3px;
+}
+
+.singleTodo-toggle {
+  flex: 1;
+}
+.singleTodo-todo {
+  flex: 3;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox + label {
+  display: inline-block;
+  position: relative;
+  width: 65px;
+  height: 25px;
+  background-color: #c73939;
+  border-radius: 70px;
+  padding: 3px;
+  cursor: pointer;
+  transition: all 500ms ease;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2) inset;
+}
+.checkbox + label:before {
+  content: "fail";
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+  line-height: 19px;
+  font-family: "Rubik", sans-serif;
+  font-size: .35rem;
+  font-weight: bold;
+  color: #c73939;;
+  text-transform: uppercase;
+  transition: left 500ms ease, color 500ms ease, -webkit-transform 150ms ease;
+  transition: left 500ms ease, color 500ms ease, transform 150ms ease;
+  /* transition: left 500ms ease, color 500ms ease, transform 150ms ease, -webkit-transform 150ms ease; */
+}
+.checkbox + label:active:before {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.checkbox:checked + label {
+  background-color: #3b7a3b;
+}
+.checkbox:checked + label:before {
+  content: "pass";
+  color: #3b7a3b;
+  left: 43px;
 }

@@ -6,6 +6,7 @@ class AddTodo extends Component {
   state = {
     name: '',
     description: '',
+    // TODO remember on REAL submit to add passing: false !!!!
     nameError: false,
     descriptionError: false,
   };
