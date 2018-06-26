@@ -1,0 +1,12 @@
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.main-left {
+  flex: 0 0 40%;
+}
+.main-right: {
+  flex: 0 0 40%;
+}

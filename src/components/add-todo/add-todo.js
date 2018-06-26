@@ -6,14 +6,14 @@ class AddTodo extends Component {
   state = {
     name: '',
     description: '',
-    // TODO remember on REAL submit to add passing: false !!!!
     nameError: false,
     descriptionError: false,
   };
   displayName = 'AddTodo';
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value, [`${event.target.name}Error`]: false});
-  };
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     if (!this.state.name || !this.state.description) {
@@ -21,6 +21,12 @@ class AddTodo extends Component {
       else this.setState({descriptionError: true});
     }
     else {
+      const newTodo = {
+        name: this.state.name,
+        description: this.state.description,
+        passing: false,
+      };
+      this.props.handleAddTodo(newTodo);
       this.setState({name: '', description: '', nameError: false, descriptionError: false});
     }
   }

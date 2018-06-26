@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './single-todo.css';
 
 
@@ -11,7 +11,7 @@ const SingleTodo = (props) => {
       <label htmlFor={`toggle${todo.id}`} />
     </div>
     <div className="singleTodo-todo">
-      <h4>{todo.title}</h4>
+      <h4>{todo.name}</h4>
       <p>{todo.description}</p>
     </div>
   </div>

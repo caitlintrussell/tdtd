@@ -1,7 +1,7 @@
 .addTodo-container {
   margin-top: 2vh;
   color: #616291;
-  width: 35vw;
+  width: 100%;
   box-shadow: 0 1px 3px rgba(63, 63, 63,0.8), 0 1px 2px rgba(63, 63, 63, 0.2);
   background-color: #ffffff;
   padding: .5rem;
