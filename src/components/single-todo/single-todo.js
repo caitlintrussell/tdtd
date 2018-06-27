@@ -1,7 +1,6 @@
 import React from 'react';
 import './single-todo.css';
 
-
 const SingleTodo = (props) => {
   const {todo} = props;
   return (
