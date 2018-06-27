@@ -2,7 +2,7 @@ import React from 'react';
 import './single-todo.css';
 
 
-const SingleTodo = (props) => {
+export const SingleTodo = (props) => {
   const {todo} = props;
   return (
   <div className="singleTodo-container">
@@ -19,4 +19,3 @@ const SingleTodo = (props) => {
 };
 
 SingleTodo.displayName = 'SingleTodo';
-export default SingleTodo;
