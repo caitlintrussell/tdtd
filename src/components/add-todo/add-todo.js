@@ -9,7 +9,9 @@ class AddTodo extends Component {
     nameError: false,
     descriptionError: false,
   };
+
   displayName = 'AddTodo';
+
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value, [`${event.target.name}Error`]: false});
   }

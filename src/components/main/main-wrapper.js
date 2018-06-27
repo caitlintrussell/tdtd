@@ -19,6 +19,11 @@ class Main extends Component {
     newTodo.id = this.state.todos.length + 1;
     this.setState({todos: [newTodo, ...this.state.todos]});
   }
+  componentDidMount() {
+    fetch('http://localhost:4000/todos')
+    .then((response) => response.json())
+    .then(data => this.setState({todos: data}));
+  }
   render() {
     return (
       <div className="main">
