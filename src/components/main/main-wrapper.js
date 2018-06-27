@@ -19,6 +19,9 @@ class Main extends Component {
     newTodo.id = this.state.todos.length + 1;
     this.setState({todos: [newTodo, ...this.state.todos]});
   }
+  componentDidMount() {
+    this.setState({todos});
+  }
   render() {
     return (
       <div className="main">
