@@ -3,10 +3,9 @@ import React, {Component} from 'react';
 import ListTodos from '../list-todos/list-todos';
 import AddTodo from '../add-todo/add-todo';
 import './main-wrapper.css';
-import todos from '../sample-todo';
 
 class Main extends Component {
-  state = {todos}
+  state = {todos: []}
   displayName = 'Main'
   toggleTodo = (e) => {
     const changedTodos = this.state.todos.map((todo) => {

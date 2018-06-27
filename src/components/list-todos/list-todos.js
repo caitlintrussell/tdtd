@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import SingleTodo from '../single-todo/single-todo';
 
-
 class ListTodos extends Component {
   displayName = 'ListTodos';
   render() {
