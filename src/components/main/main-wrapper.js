@@ -6,7 +6,7 @@ import './main-wrapper.css';
 import todos from '../sample-todo';
 
 class Main extends Component {
-  state = {todos: ''}
+  state = {todos: []}
   displayName = 'Main'
   toggleTodo = (e) => {
     const changedTodos = this.state.todos.map((todo) => {
@@ -18,6 +18,9 @@ class Main extends Component {
   handleAddTodo = (newTodo) => {
     newTodo.id = this.state.todos.length + 1;
     this.setState({todos: [newTodo, ...this.state.todos]});
+  }
+  componentDidMount() {
+    this.setState({todos});
   }
   render() {
     return (
